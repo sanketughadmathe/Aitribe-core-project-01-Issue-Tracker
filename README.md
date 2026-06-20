@@ -111,9 +111,40 @@ Server runs at `http://127.0.0.1:8000/`
 
 ## Postman Screenshots
 
-> See `assets/` folder for Postman screenshots covering success and failure cases.
+### Success Cases
+
+**POST `/api/reporters/` - 201 Created**
+
+![POST /api/reporters/ - 201 Created](assets/SCR-20260620-ubra.png)
+
+**POST `/api/issues/` - 201 Created (critical issue with URGENT message)**
+
+![POST /api/issues/ - 201 Created](assets/SCR-20260620-ubqi.png)
+
+**GET `/api/issues/` - 200 List all issues**
+
+![GET /api/issues/ - 200 OK](assets/SCR-20260620-ucik.png)
+
+**GET `/api/issues/?id=1` - 200 Single issue**
+
+![GET /api/issues/?id=1 - 200 OK](assets/SCR-20260620-ucms.png)
+
+**GET `/api/issues/?status=open` - 200 Filtered by status**
+
+![GET /api/issues/?status=open - 200 OK](assets/SCR-20260620-ucrp.png)
+
+### Failure Cases
+
+**POST `/api/issues/` - 400 Bad Request (empty title)**
+
+![POST /api/issues/ - 400 Bad Request](assets/SCR-20260620-ubtt.png)
+
+**GET `/api/issues/?id=444` - 404 Not Found**
+
+![GET /api/issues/?id=444 - 404 Not Found](assets/SCR-20260620-ucpm.png)
 
 ---
+
 
 ## Project Structure
 
